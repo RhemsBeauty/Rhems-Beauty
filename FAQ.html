@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+    
+            .faq-container {
+                max-width: 600px;
+                margin: 10px auto;
+                padding: 10px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+    
+            .question {
+                cursor: pointer;
+                padding: 10px;
+                background-color: #0a78c2;
+                color: #fff;
+                margin-bottom: 5px;
+                border: none;
+                text-align: left;
+                outline: none;
+                width: 100%;
+                box-sizing: border-box;
+            }
+    
+            .answer {
+                display: none;
+                padding: 10px;
+                border-top: 1px solid #ddd;
+            }
+            h3{
+                font-family: verdana;
+                color: grey;
+                text-transform: capitalize;
+                padding: 10px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+
+
+
+            <div class="header-top" data-header>
+              <div class="container">
+        
+                <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                  <span class="line line-1"></span>
+                  <span class="line line-2"></span>
+                  <span class="line line-3"></span>
+                </button>
+        
+                <div class="input-wrapper">
+                  <input type="search" name="search" placeholder="Search product" class="search-field">
+        
+                  <button class="search-submit" aria-label="search">
+                    <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                  </button>
+                </div>
+        
+                <div class="header-logo">
+                  <h2>Rhems-Beauty</h2>
+                </div>
+               
+        
+                <nav class="navbar">
+                  <ul class="navbar-list">
+        
+                    <li>
+                      <a href="/index.html" class="navbar-link has-after">Home</a>
+                    </li>
+        
+                    <li>
+                      <a href="/index.html" class="navbar-link has-after">Collection</a>
+                    </li>
+        
+                    <li>
+                      <a href="/index.html" class="navbar-link has-after">Shop</a>
+                    </li>
+                    <li>
+                      <a href="/index.html" class="navbar-link has-after" data-nav-link>Contact-us</a>
+                    </li>
+        
+                  
+                    <li>
+                      <a href="https://www.instagram.com/rhems._.beauty?igsh=MW1qM3Vyd2d4am1uaQ==" class="navbar-link has-after"><i class="fa fa-facebook"></i> Facebook page</a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/rhems._.beauty?igsh=MW1qM3Vyd2d4am1uaQ==" class="navbar-link has-after"><i class="fa fa-instagram"></i>  Instagram</a>
+                    </li>
+        
+        
+                  </ul>
+                </nav>
+        
+              </div>
+            </div>
+        
+          </header>
+        
+        
+        
+        
+        
+          <!-- 
+            - #MOBILE NAVBAR
+          -->
+        
+          <div class="sidebar">
+            <div class="mobile-navbar" data-navbar>
+              
+        
+              <div class="wrapper">
+               
+        
+                <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                  <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+              </div>
+        
+              <ul class="navbar-list">
+        
+                <li>
+                  <a href="/index.html" class="navbar-link" data-nav-link>Home</a>
+                </li>
+        
+                <li>
+                  <a href="/index.html" class="navbar-link" data-nav-link>Collection</a>
+                </li>
+        
+                <li>
+                  <a href="/index.html" class="navbar-link" data-nav-link>Shop</a>
+                </li>
+                <li>
+                  <a href="/index.html" class="navbar-link" data-nav-link>Contact-us</a>
+                </li>
+                <li>
+                  <a href="#" class="navbar-link has-after"><i class="fa fa-facebook"></i>  Facebook page</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/rhems._.beauty?igsh=MW1qM3Vyd2d4am1uaQ==" class="navbar-link has-after"><i class="fa fa-instagram"></i>  Instagram</a>
+                </li>
+        
+              
+        
+              </ul>
+              <div class="input-wrapper" style="display: flex;">
+                <input type="search" name="search"  placeholder="Search product" class="search-field" style="outline: none; border: solid 1px rgb(230, 230, 230);padding: 10px;">
+        
+                <button class="search-submit" style="font-size: 30px;" aria-label="search">
+                  <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                </button>
+              </div>
+        
+            </div>
+        
+            <div class="overlay" data-nav-toggler data-overlay></div>
+          </div>
+        
+        
+        
+        
+    
+    <div class="faq-container">
+        <h3>Click any question and get your immediate answers</h3>
+        <button class="question" onclick="toggleAnswer(1)">What is Lorem Ipsum?</button>
+        <div class="answer" id="answer1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    
+        <button class="question" onclick="toggleAnswer(2)">Why do we use it?</button>
+        <div class="answer" id="answer2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+    
+        <button class="question" onclick="toggleAnswer(3)">Where does it come from?</button>
+        <div class="answer" id="answer3">Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+        <button class="question" onclick="toggleAnswer(4)">What is Lorem Ipsum?</button>
+        <div class="answer" id="answer4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    
+        <button class="question" onclick="toggleAnswer(5)">Why do we use it?</button>
+        <div class="answer" id="answer5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+    
+        <button class="question" onclick="toggleAnswer(6)">Where does it come from?</button>
+        <div class="answer" id="answer6">Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+    
+        <!-- Add more FAQ items as needed -->
+    
+    </div>
+    
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById('answer' + id);
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+    </script>
+    <script src="./assets/js/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    </body>
+    </html>
+    
