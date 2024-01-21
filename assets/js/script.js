@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 //Michael otote @ 2024
 /*OTOTECH INDUSTRIES*/
